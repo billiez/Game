@@ -8,6 +8,6 @@ public class Test {
 
     @GetMapping
     public String helloWorld() {
-        return "Hello, world!";
+        return "Hello, worlds!";
     }
 }
