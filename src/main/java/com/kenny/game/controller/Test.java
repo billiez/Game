@@ -1,13 +1,17 @@
 package com.kenny.game.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.kenny.game.model.Message;
+import org.springframework.web.bind.annotation.*;
 
-@RestController("/")
+//TODO: Rename this class
+
+@RestController
+@RequestMapping("/rest")
 public class Test {
 
-    @GetMapping
-    public String helloWorld() {
-        return "Hello, worlds!";
+    @PostMapping("/submit")
+    public String helloWorld(@RequestBody Message message) {
+        return "Received the following message: " + message.getData();
     }
+
 }
